@@ -3,81 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Noor Alam's Dev Journey</title>
+    <title>Noor Alam - Developer Journey</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #1a1a2e;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1e1e2f, #2d2d44);
             color: white;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
         }
-        .container {
-            background-color: #16213e;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
             text-align: center;
-            max-width: 400px;
+            width: 350px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
-        h1 {
-            color: #4ecca3;
-            margin-bottom: 10px;
+        h1 { color: #00d2ff; margin-bottom: 5px; }
+        p { color: #ccc; margin: 5px 0; }
+        .skills {
+            margin: 20px 0;
+            text-align: left;
         }
-        p {
-            font-size: 18px;
-            color: #bdc3c7;
+        .skill-item {
+            background: rgba(0, 210, 255, 0.2);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            display: inline-block;
+            margin: 3px;
         }
-        .highlight {
-            color: #fca311;
+        .visa-status {
+            background: #fca311;
+            color: #1a1a2e;
             font-weight: bold;
-        }
-        .visa-box {
-            margin-top: 20px;
-            padding: 15px;
-            border: 2px dashed #4ecca3;
+            padding: 10px;
             border-radius: 10px;
+            margin-top: 20px;
         }
         button {
-            background-color: #4ecca3;
-            color: #1a1a2e;
+            background: #00d2ff;
+            color: white;
             border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
+            padding: 12px 25px;
+            border-radius: 25px;
+            margin-top: 25px;
             cursor: pointer;
             font-weight: bold;
-            margin-top: 20px;
+            transition: 0.3s;
         }
-        button:hover {
-            background-color: #45b293;
-        }
+        button:hover { background: #0099cc; transform: scale(1.05); }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>MD Noor Alam</h1>
-        <p>Profession: <span class="highlight">Pipe Liner</span></p>
-        <p>Location: <span class="highlight">South Korea 🇰🇷</span></p>
+    <div class="card">
+        <h1>Noor Alam</h1>
+        <p>Expertise: Pipe Liner @ Hyundai Samho</p>
         
-        <div class="visa-box">
-            <p>Target: <strong>E-7-4 Visa</strong></p>
-            <p>Date: <strong>April 2024</strong></p>
+        <div class="skills">
+            <p><strong>Coding Skills:</strong></p>
+            <span class="skill-item">HTML5</span>
+            <span class="skill-item">CSS3</span>
+            <span class="skill-item">JavaScript (ES6)</span>
+            <span class="skill-item">React</span>
+            <span class="skill-item">Git/GitHub</span>
         </div>
 
-        <p id="message">Loading my Dream...</p>
+        <div class="visa-status">
+            Target: E-7-4 Visa (April 2026) 🚀
+        </div>
+
+        <p id="quote" style="margin-top: 15px; font-style: italic; font-size: 14px;"></p>
         
-        <button onclick="showMotivation()">Click for Motivation</button>
+        <button onclick="updateStatus()">Work-Life Status</button>
     </div>
 
     <script>
-        function showMotivation() {
-            const msg = document.getElementById('message');
-            msg.innerHTML = "You are doing great! Hard work in the shipyard will pay off in Programming. 🚀";
-            msg.style.color = "#4ecca3";
+        function updateStatus() {
+            const quotes = [
+                "Hard work in the shipyard builds character, coding builds future!",
+                "From Pipe Liner to Software Engineer - The journey has started.",
+                "Every commit counts. Keep going, Noor Alam!",
+                "April is coming. Stay focused on your visa and code."
+            ];
+            const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+            document.getElementById('quote').innerText = randomQuote;
         }
     </script>
 </body>
