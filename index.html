@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noor Alam's Dev Journey</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a2e;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #16213e;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            text-align: center;
+            max-width: 400px;
+        }
+        h1 {
+            color: #4ecca3;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 18px;
+            color: #bdc3c7;
+        }
+        .highlight {
+            color: #fca311;
+            font-weight: bold;
+        }
+        .visa-box {
+            margin-top: 20px;
+            padding: 15px;
+            border: 2px dashed #4ecca3;
+            border-radius: 10px;
+        }
+        button {
+            background-color: #4ecca3;
+            color: #1a1a2e;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #45b293;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>MD Noor Alam</h1>
+        <p>Profession: <span class="highlight">Pipe Liner</span></p>
+        <p>Location: <span class="highlight">South Korea 🇰🇷</span></p>
+        
+        <div class="visa-box">
+            <p>Target: <strong>E-7-4 Visa</strong></p>
+            <p>Date: <strong>April 2024</strong></p>
+        </div>
+
+        <p id="message">Loading my Dream...</p>
+        
+        <button onclick="showMotivation()">Click for Motivation</button>
+    </div>
+
+    <script>
+        function showMotivation() {
+            const msg = document.getElementById('message');
+            msg.innerHTML = "You are doing great! Hard work in the shipyard will pay off in Programming. 🚀";
+            msg.style.color = "#4ecca3";
+        }
+    </script>
+</body>
+</html>
